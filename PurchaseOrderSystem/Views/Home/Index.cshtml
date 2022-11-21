@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    TempData["a"] = 1;
+}
+<style>
+
+    #switch {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+
+    .chiled-table {
+        border-top: 1px solid darkgray;
+        margin-top: 10px;
+    }
+
+    .tab-align {
+        vertical-align: top !important
+    }
+
+    td.details-control {
+        background: url('../images/1.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    tr.shown td.details-control {
+        background: url('../images/details_close.jfif') no-repeat center center;
+    }
+
+    .swal-footer {
+        overflow: auto;
+    }
+
+    .swal-button-container {
+        float: right;
+    }
+</style>
+
+<div>
+    <a href="/OrderList/CreateOrder" class="btn btn-sm btn-primary pull-right" style="width:150px; margin-bottom:10px;">Create Order</></a>
+</div>
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="example" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    @*<th></th>*@
+                    <th>ID</th>
+
+                    <th>OrderNumber</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th>CreatedOn</th>
+                    <th>CreatedBy</th>
+                    <th>UpdatedOn</th>
+                    <th>UpdatedBy</th>
+                    <th>Edit</th>
+                     <th>Delete</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="~/lib/jquery/dist/jquery-3.5.1.js"></script>
+    <script src="~/lib/dataTables/jquery.dataTables.min.js"></script>
+    <link href="~/lib/dataTables/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/dataTables/dataTables.jqueryui.css" rel="stylesheet" />
+
+<script type="text/javascript">
+
+            $(document).ready(function () {
+
+                var tableF=  $('#example').DataTable({
+                    processing: true,
+                    serverSide: true,
+                    searchable: true,
+                    bSort: false,
+                    ajax: {
+                        url: "/Home/OrderList",
+                        type: 'POST',
+                        dataSrc: 'data',
+
+                    },
+                    "columnDefs": [
+                    {
+                        "targets": [0],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [4],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [5],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [6],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    {
+                        "targets": [7],
+                        "visible": false,
+                        "searchable": false
+                    },
+                    ],
+                    "aoColumns": [
+                        //{
+                        //    "className": 'details-control',
+                        //    "orderable": false,
+                        //    "data": null,
+                        //    "defaultContent": ''
+                        //},
+                        { "data": "id", "name": "ID", "autoWidth": true },
+                        { "data": "orderNumber", "name": "OrderNumber", "autoWidth": true },
+                        /*{ "data": "status", "name": "Status", "autoWidth": true },*/
+                        {
+                            "data": "status",
+                            "render": function (data, type, row, meta) {
+                                if (row.status == "1") {
+                                    return "DRAFT";
+                                }
+                                else {
+                                    return "SUBMITTED";;
+                                }
+                            }
+                        },
+
+                        { "data": "amount", "name": "Amount", "autoWidth": true },
+                        { "data": "createdOn", "name": "CreatedOn", "autoWidth": true },
+                        { "data": "createdBy", "name": "CreatedBy", "autoWidth": true },
+                        { "data": "updatedOn", "name": "UpdatedOn", "autoWidth": true },
+                        { "data": "updatedBy", "name": "UpdatedBy", "autoWidth": true },
+                        {
+                            "render": function (data, type, full, meta) { return '<a class="btn btn-info" href="/OrderList/EditOrder/' + full.id + '">Edit</a>'; }
+                        },
+                        {
+                            data: null,
+                            render: function (data, type, row) {
+                                return "<a href='#' class='btn btn-danger' onclick=javascript:Delete('" + row.id + "'); >Delete</a>";
+
+                                //return '<a  class="btn btn-danger" href="/OrderList/DeleteOrder/' + row.id + '" >Delete</a>';
+
+                            }
+                        },
+                    ],
+                 });
+                $('#example tbody').on('click', 'td.details-control', function () {
+                    var tr = $(this).closest('tr');
+                    var d = tableF.row(this).data();
+                    var row = tableF.row(tr);
+                    if (row.child.isShown()) {
+                        // This row is already open - close it
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    }
+                    else {
+                        // Open this row
+                        //row.child(format(d.id)).show();
+                        tr.addClass('shown');
+                    }
+                });
+            });
+    function format(d) {
+        // `d` is the original data object for the row // format for child table bind when click on plus button///
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "/Home/getlistitem",
+            data: "Id=" + d,
+            success: function (result, status, xhr) {
+                for (var i = 0; i < result.length; i++) {
+                    html += '<table class="table table-bordered " cellpadding="5" cellspacing="0" border="0" style="padding-left:50px; text-align:left">' +
+                        '<tr>' +
+                        '<td><strong>Price</strong><span style="margin-left:6%">:  ' + result[i].productPrice + '</span></td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td><strong>Name</strong><span style="margin-left:6%">:  ' + result[i].productName + '</span></td>' +
+                        '</tr>' +
+                        '</table>';
+                }
+                return html;
+            },
+            error: function (xhr, status, error) {
+                alert("error")
+            }
+        });
+        
+    }
+    function Delete(ID) {
+        if (confirm("Are you sure you want to delete ...?")) {
+            var url = '@Url.Content("~/")' + "OrderList/DeleteOrder";
+
+            $.post(url, { ID: ID }, function (data) {
+                if (data) {
+                    oTable = $('#example').DataTable();
+                    oTable.draw();
+                } else {
+                    alert("Something Went Wrong!");
+                }
+            });
+        } else {
+            return false;
+        }
+    }
+</script>
+}

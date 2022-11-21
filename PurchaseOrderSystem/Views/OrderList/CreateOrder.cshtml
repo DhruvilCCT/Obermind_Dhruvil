@@ -1,0 +1,210 @@
+﻿@model PurchaseOrderSystem.Models.PG_ModifyCRMOrder
+@{
+    ViewData["Title"] = "Create Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    TempData["a"] = 1;
+}
+@{
+    var list = new List<SelectListItem>
+{
+                      new SelectListItem { Text = "DRAFT", Value = "1" },
+                      new SelectListItem { Text = "SUBMITTED",Value = "2" }
+                   };
+}
+
+<style>
+    .add-create-btn-wrap input#Additemlist {
+        margin-left: 0 !important;
+    }
+    .add-create-btn-wrap {
+        padding-top: 10px;
+    }
+
+</style>
+
+<label>Order Number</label>
+@Html.TextBoxFor(m => m.OrderMaster.OrderNumber, new { @id = "OrderNumber" })
+@*<input type="text" id="oid" />*@
+<label>Amount</label>
+@Html.TextBoxFor(m => m.OrderMaster.Amount, new { @disabled = "disabled" })
+@*<input type="text" disabled="disabled" id="amt" />*@
+<label>Status</label>
+@Html.DropDownListFor(m => m.OrderMaster.Status, list, "--Select--", new { @class = "css-class", @id = "status" })
+
+<div class="add-create-btn-wrap">
+    <label style="opacity:0;">Order Number</label>
+    <input class="btn btn-sm btn-primary ml-1" type="button" value="Add items" id="Additemlist" />
+    <input class="btn btn-sm btn-primary ml-1" type="submit" value="Save" id="CreateOrder" />
+    <input class="btn btn-sm btn-primary pull-right" style="width:150px;" onclick="Gotolist();" value="Back to List" />
+</div>
+<table id="orderDetail" style="display:none" class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+</table>
+<label>Total:</label><span id="totalPrice">0</span>
+<br />
+
+<div id="divDoctorModel"></div>
+@section Scripts{
+    @{await Html.RenderPartialAsync("_AdditemList");}
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+    <link href="~/lib/dataTables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="@Url.Content("~/lib/dataTables/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/lib/dataTables/dataTables.bootstrap4.min.js")"></script>
+    <script src="~/lib/jquery/dist/sweetalert.min.js"></script>
+    <link href="~/css/sweetalert.css" rel="stylesheet" />
+    <link href="~/css/loader.css" rel="stylesheet" />
+    <script type="text/javascript">
+
+        this._orderlist = [];
+        $("#CreateOrder").click(function (e) {
+            if ($("#OrderNumber").val() == "")
+                alert("order number cannot be empty");
+            else if ($("#status").val() == "")
+                alert("Please select status");
+            else {
+                var _orderId = $("#OrderNumber").val();
+                var _status = $("#status").val();
+                var rowCount = $("#orderDetail > tbody > tr").length;
+                if (_status == "1") {
+                    if (rowCount > 1) {
+                        $.ajax({
+                            type: "POST",
+                            url: "/OrderList/CreateOrder",
+                            data: { orderNumber: _orderId, status: _status, id: 0, orderlist: _orderlist },
+                            success: function (result, status, xhr) {
+                                alert("Order saved successfully.");
+                                $("#OrderNumber").val('');
+                                $("#status").val("--select--");
+                                window.location.href = "/Home/Index";
+                            },
+                            error: function (xhr, status, error) {
+                                alert("error")
+                            }
+                        });
+                    }
+                    else {
+                        swal({
+                            title: "oops!",
+                            text: "Please add at least one item before save order.",
+                            icon: "warning",
+                        }, function (isConfirm) {
+                            if (isConfirm) {
+                                return false;
+                            }
+                        });
+                    }
+                }
+                else {
+                    swal({
+                        title: "oops!",
+                        text: "You can not select status as 'SUBMITTED' while processing order.",
+                        icon: "warning",
+                    }, function (isConfirm) {
+                        if (isConfirm) {
+                            return false;
+                        }
+                    });
+                }
+            }
+            return false;
+        });
+
+        function addItem(name, id, price) {
+            var rowIndex = $("#orderDetail tr").length;
+
+            rowIndex++;
+            $("#orderDetail").show();
+            var rowCount = $("#orderDetail > tbody > tr").length;
+            if (rowCount <= 10) {
+                var _orderDetail = {
+                    ProductID: id,
+                    ProductPrice: price
+                };
+                const parsedTotal = parseInt(totalPrice.innerText);
+                var finaltotal = parseInt(parsedTotal) + parseInt(price);
+                if (parseInt(finaltotal) > 10000) {
+                    alert("Max.Total price is not allowed more than 10000")
+                }
+                else {
+                    totalPrice.innerHTML = parseInt(finaltotal);
+                    //$("#totalPrice").html(totalPrice);
+                    this._orderlist.push(_orderDetail);
+                    $('#orderDetail').append('<tr id=' + rowIndex + '><td>' + name + '</td><td><input type="text" value="' + price + '" class="form-control"/></td><td><input type="button" class="btn btn-primary btn-sm" id="" value="delete" onclick="deleteItem(' + rowIndex + ')" /></td></tr>');
+                }
+            }
+            else {
+                swal({
+                    title: "oops!",
+                    text: "Max number of line item should be allow only 10 for PO.",
+                    icon: "warning",
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                    }
+                });
+            }
+        }
+
+        function deleteItem(rowIndex) {
+            $("#" + rowIndex + "").remove();
+            const parsedTotal = parseInt(totalPrice.innerText);
+            totalPrice.innerHTML = parseInt(parsedTotal);
+        }
+
+        $("#Additemlist").click(function (e) {
+            $.ajax({
+                type: "GET",
+                url: "/OrderList/ProductList",
+                data: "",
+                dataType: "html",
+                async: true,
+                success: function (data) {
+                    //$('.ajax-loader').css("visibility", "hidden");
+                    $('#divDoctorModel').html(data);
+                    var tableF = $('#exampleF').DataTable({
+                        bSort: false,
+                        initComplete: function () {
+                            // Apply the search
+                            this.api().columns().every(function () {
+                                var that = this;
+
+                            });
+                        },
+                        select: {
+                            style: 'single'
+                        },
+                    });
+                    
+                    $("#addItemModal").on('shown.bs.modal', function () {
+                        $(this).find("button[data-dismiss='modal']").focus();
+                    });
+                   
+                    $("#myEditRiskIdTitle").text("Product List");
+                    $('#addItemModal').modal({
+                        backdrop: "static",
+                        show: true,
+                    });
+                    $("#addItemModal").on('hide.bs.modal', function (e) {
+                        if ($(document.activeElement)[0].innerText == "Close" || $(document.activeElement)[0].classList[0] == "close") {
+                        }
+                    });
+                    $("#addItemModal").on('hidden.bs.modal', function () {
+                        $("#addItemModal").unbind();
+                        $('.modal-backdrop').remove();
+                    });
+                },
+                error: function () {
+                    //alert("Error while inserting data");
+                    //$('.ajax-loader').css("visibility", "hidden");
+                }
+            });
+        });
+
+        function Gotolist() {
+            window.location.href = "/Home/Index";
+        }
+    </script>
+}

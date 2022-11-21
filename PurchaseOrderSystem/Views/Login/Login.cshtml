@@ -1,0 +1,152 @@
+﻿@model PurchaseOrderSystem.Models.Login
+@{
+    ViewData["Title"] = "Login";
+
+}
+
+<style>
+    .card-body {
+        padding: 5px !important;
+        margin-left: 10px;
+    }
+
+    .modal-lg {
+        max-width: 80% !important;
+    }
+
+    .form-group {
+        margin-bottom: 3px !important;
+    }
+</style>
+
+<div class="text-center">
+    <div class="container">
+
+        
+            <table class="table" style="font-size:15px;width:40%;margin-top:15%;margin-left:30%;height:50%;border:1px solid #E5E5E5;">
+                <tr>
+                    <td style="border:none;text-align:right;padding-top:5%;">
+                        <strong>UserName</strong>
+                    </td>
+                    <td style="border:none;padding-top:5%;">
+                        @Html.TextBoxFor(m => m.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border:none;text-align:right;">
+                        <strong>Password</strong>
+                    </td>
+                    <td style="border:none;">
+                        @Html.TextBoxFor(m => m.Password, new {@type="password",@id= "password" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border:none;">
+                    </td>
+                    <td style="border:none;padding-bottom:5%;">
+                        <input class="btn btn-sm btn-primary ml-1" style="width:90px;" type="submit" value="Login" id="Login" />
+                        <input class="btn btn-sm btn-danger ml-1" style="width:90px;" type="button" value="Register" id="Register" />
+                    </td>
+                </tr>
+            </table>
+
+    </div>
+</div>
+
+@section Scripts {
+
+    <link href="~/lib/dataTables/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/jquery-3.5.1.js" />
+    <script src="@Url.Content("~/lib/dataTables/jquery.dataTables.min.js")">IDBCursor</script>
+    <script src="@Url.Content("~/lib/dataTables/dataTables.bootstrap4.min.js")"></script>
+    <link href="~/lib/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/sweetalert.min.js"></script>
+    <link href="~/css/sweetalert.css" rel="stylesheet" />
+    <link href="~/css/loader.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+       
+        $("#Login").click(function () {
+            var _uname = $("#UserName").val();
+            var _pwd = $("#password").val();
+            $.ajax({
+                type: "POST",
+                url: "/Login/Login",
+                data: { username: _uname, pwd: _pwd },
+                success: function (data) {
+                    //$('.ajax-loader').css("visibility", "hidden");
+                    if (data =="1") {
+                        swal({
+                            title: "Yess!!",
+                            text: "Authentication Successfull..!!",
+                            icon: "success",
+                        }, function (isConfirm) {
+                            if (isConfirm) {
+                                window.location.href = "/Home/Index";
+                            }
+                        });
+                    }
+
+                    else {
+                        swal({
+                            title: "oops!!",
+                            text: "Login failed.",
+                            icon: "warning",
+                        }, function (isConfirm) {
+                            if (isConfirm) {
+                            }
+                        });
+                    }
+                },
+                error: function () {
+                    //$('.ajax-loader').css("visibility", "hidden");
+                }
+            });
+        });
+        $("#Register").click(function () {
+            var _uname = $("#UserName").val();
+            var _pwd = $("#password").val();
+            if ($("#UserName").val() == "") { alert("Please enter UserName"); }
+            if ($("#Password").val() == "") { alert("Please enter Password"); }
+            if ($("#UserName").val() != "" && $("#Password").val() != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "/Login/Register",
+                    data: { username: _uname, pwd: _pwd },
+                    success: function (data) {
+                        //$('.ajax-loader').css("visibility", "hidden");
+                        if (data != "-1") {
+                            swal({
+                                title: "Yess!!",
+                                text: "Registration Successfull..!!",
+                                icon: "success",
+                            }, function (isConfirm) {
+                                if (isConfirm) {
+                                }
+                            });
+                        }
+
+                        else {
+                            swal({
+                                title: "oops!!",
+                                text: "Registration failed.",
+                                icon: "warning",
+                            }, function (isConfirm) {
+                                if (isConfirm) {
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        //$('.ajax-loader').css("visibility", "hidden");
+                    }
+                });
+            }
+        });
+    </script>
+
+}

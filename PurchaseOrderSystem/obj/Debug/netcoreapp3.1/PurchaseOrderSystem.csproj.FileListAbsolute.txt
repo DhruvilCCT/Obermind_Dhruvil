@@ -1,0 +1,179 @@
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\appsettings.json
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.exe
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.deps.json
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.runtimeconfig.json
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.runtimeconfig.dev.json
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.pdb
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.pdb
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.csproj.AssemblyReference.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.GeneratedMSBuildEditorConfig.editorconfig
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.AssemblyInfoInputs.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.AssemblyInfo.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.csproj.CoreCompileInputs.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.MvcApplicationPartsAssemblyInfo.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorAssemblyInfo.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorAssemblyInfo.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\staticwebassets\PurchaseOrderSystem.StaticWebAssets.Manifest.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\staticwebassets\PurchaseOrderSystem.StaticWebAssets.xml
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\PurchaseOrderSystem.styles.css
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.TagHelpers.input.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.TagHelpers.output.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorCoreGenerate.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderList.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\OrderList\CreateOrder.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\OrderList\EditOrder.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AddItemList.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorTargetAssemblyInfo.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorTargetAssemblyInfo.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.pdb
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.csproj.CopyComplete
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.dll
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.pdb
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.genruntimeconfig.cache
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
+F:\PurchaseOrderSystem\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Orderdetails.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\appsettings.json
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.exe
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.deps.json
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.runtimeconfig.json
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.runtimeconfig.dev.json
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.pdb
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.pdb
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.GeneratedMSBuildEditorConfig.editorconfig
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.AssemblyInfoInputs.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.AssemblyInfo.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.csproj.CoreCompileInputs.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.MvcApplicationPartsAssemblyInfo.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorAssemblyInfo.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorAssemblyInfo.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\staticwebassets\PurchaseOrderSystem.StaticWebAssets.Manifest.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\staticwebassets\PurchaseOrderSystem.StaticWebAssets.xml
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\PurchaseOrderSystem.styles.css
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.TagHelpers.input.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.TagHelpers.output.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorCoreGenerate.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderList.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\OrderList\CreateOrder.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\OrderList\EditOrder.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AddItemList.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Orderdetails.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorTargetAssemblyInfo.cache
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.RazorTargetAssemblyInfo.cs
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.Views.pdb
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.csproj.CopyComplete
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.dll
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.pdb
+F:\PurchaseOrderSystem - Copy\PurchaseOrderSystem\obj\Debug\netcoreapp3.1\PurchaseOrderSystem.genruntimeconfig.cache

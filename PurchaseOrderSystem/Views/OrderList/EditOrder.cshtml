@@ -1,0 +1,336 @@
+﻿@model PurchaseOrderSystem.Models.PG_ModifyCRMOrder
+
+@{
+    ViewData["Title"] = "Edit Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    TempData["a"] = 1;
+}
+@{
+    var list = new List<SelectListItem>
+{
+                      new SelectListItem { Text = "DRAFT", Value = "1" },
+                      new SelectListItem { Text = "SUBMITTED",Value = "2" }
+                   };
+}
+
+<style>
+    .order-details-wrap-tbl {
+        max-width: 650px;
+        margin: 0 auto 0 0;
+        border: 1px solid #dee2e6;
+        border-collapse: collapse;
+    }
+</style>
+
+@if (Model.Editorderlist.Count > 0)
+{
+    @if (Model.Editorderlist[0].Status == 1)
+    {
+        <div>
+            <label>Order Number</label>
+            <input type="text" value="@Model.Editorderlist[0].OrderNumber" id="oid" />
+            <label>Amount</label>
+            <input type="text" id="existAmount" disabled="disabled" value="@Model.Editorderlist[0].Amount" />
+            <label>Status</label>
+            @Html.DropDownListFor(m => m.Editorderlist[0].Status, list, "--Select--", new { @class = "css-class", @value = Model.Editorderlist[0].Status, @id = "status" })
+        </div>
+        <div class="add-create-btn-wrap">
+            <label style="font-size:0;">Order Number</label>
+            <input class="btn btn-sm btn-primary ml-1" type="submit" value="Save" id="EditOrder" />
+            <input class="btn btn-sm btn-primary pull-right" style="width:150px;" onclick="Gotolist();" value="Back to List" />
+            @*<a href="/Home/Index" class="btn btn-sm btn-primary pull-right" style="width:150px;">Back to List</></a>*@
+            <input class="btn btn-sm btn-primary ml-1" type="button" value="Add items" id="Additemlist" />
+        </div>
+
+    }
+    else
+    {
+        <div>
+            <label>Order Number</label>
+            <input type="text" value="@Model.Editorderlist[0].OrderNumber" id="oid" disabled="disabled" />
+            <label>Amount</label>
+            <input type="text" id="existAmount" disabled="disabled" value="@Model.Editorderlist[0].Amount" />
+            <label>Status</label>
+            @Html.DropDownListFor(m => m.Editorderlist[0].Status, list, "--Select--", new { @class = "css-class", @value = Model.Editorderlist[0].Status, disabled = "disabled", @id = "status" })
+        </div>
+        <div>
+            <label style="font-size:0;">Order Number</label>
+            <input class="btn btn-sm btn-primary ml-1" type="submit" value="Save" disabled="disabled" id="EditOrder" />
+            <input class="btn btn-sm btn-primary pull-right" style="width:150px;" onclick="Gotolist();" value="Back to List" />
+            @*<a href="/Home/Index" class="btn btn-sm btn-primary pull-right" style="width:150px;">Back to List</></a>*@
+            <input class="btn btn-sm btn-primary ml-1" disabled="disabled" type="button" value="Add items" id="Additemlist" />
+        </div>
+    }
+}
+
+<br />
+@if (Model.Editorderlist.Count > 0)
+{
+    @if (Model.Editorderlist[0].Status == 1)
+    {
+        <table id="orderDetail" class="table order-details-wrap-tbl">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            @{ if (Model.Editorderlist.Count > 0)
+                {
+                    foreach (var item in Model.Editorderlist)
+                    {
+                        <tr class="Editlist">
+                            <td>
+                                <input type="hidden" id="productidE" value="@item.ProductID" />
+                                <span id="productname_@item.ProductID">
+                                    @item.ProductName
+                                </span>
+                            </td>
+                            <td>
+                                <input type="text" class="ppriceE" id="ppriceE_@item.ProductID" value="@item.ProductPrice">
+                            </td>
+
+                            <td><button class="btn btn-primary btn-sm" onclick="javascript: deleteexitItem(@item.ID,@item.ProductPrice,@item.OID)">Delete</button></td>
+                        </tr>
+                    }
+                }
+            }
+        </table>
+    }
+
+    else
+    {
+        <table id="orderDetail" class="table order-details-wrap-tbl">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            @{ if (Model.Editorderlist.Count > 0)
+                {
+                    foreach (var item in Model.Editorderlist)
+                    {
+                        <tr class="Editlist">
+                            <td>
+                                <input type="hidden" id="productidE" disabled="disabled" value="@item.ProductID" />
+                                <span id="productname_@item.ProductID">
+                                    @item.ProductName
+                                </span>
+                            </td>
+                            <td>
+                                <input type="text" class="ppriceE" id="ppriceE_@item.ProductID" disabled="disabled" value="@item.ProductPrice">
+                            </td>
+
+                            <td><button class="btn btn-primary btn-sm" disabled="disabled" onclick="javascript: deleteexitItem(@item.OID)">Delete</button></td>
+                        </tr>
+                    }
+                } }
+        </table>
+    }
+}
+
+<label>Total:</label><span id="totalPrice"></span>
+<br />
+<div id="divDoctorModel"></div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_AdditemList");}
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+    <link href="~/lib/dataTables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="@Url.Content("~/lib/dataTables/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/lib/dataTables/dataTables.bootstrap4.min.js")"></script>
+    <script src="~/lib/jquery/dist/sweetalert.min.js"></script>
+    <link href="~/css/sweetalert.css" rel="stylesheet" />
+    <link href="~/css/loader.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+    this._orderlist = [];
+            $(document).ready(function () {
+
+            });
+
+        $("#EditOrder").click(function (e) {
+            var _id = "";
+            if ($("#oid").val() == "")
+                alert("order number cannot be empty");
+            else if ($("#status").val() == "")
+                alert("status cannot be empty");
+            else {
+                var _orderId = $("#oid").val();
+                var _status = $("#status").val();
+
+                _id =@Model.Editorderlist[0].ID;
+
+                var _existlist = Addvaluetoexit();
+                $.ajax({
+                    type: "POST",
+                    url: "/OrderList/CreateOrder",
+                    data: { orderNumber: _orderId, status: _status, id: _id, orderlist: _existlist },
+                    success: function (result, status, xhr) {
+                        alert("Order Edited successfully.")
+                        $("#oid").val('');
+                        $("#status").val("--select--");
+                        window.location.href = "/Home/Index";
+                    },
+                    error: function (xhr, status, error) {
+                        alert("error")
+                    }
+                });
+            }
+            return false;
+        });
+
+        $("#Additemlist").click(function (e) {
+            $.ajax({
+                type: "GET",
+                url: "/OrderList/ProductList",
+                data: "",
+                dataType: "html",
+                async: true,
+                success: function (data) {
+                    $('#divDoctorModel').html(data);
+                    var tableF = $('#exampleF').DataTable({
+                        bSort: false,
+                        initComplete: function () {
+                            // Apply the search
+                            this.api().columns().every(function () {
+                                var that = this;
+                            });
+                        },
+                        select: {
+                            style: 'single'
+                        },
+                    });
+
+                    $("#addItemModal").on('shown.bs.modal', function () {
+                        $(this).find("button[data-dismiss='modal']").focus();
+                    });
+
+                    $("#myEditRiskIdTitle").text("Product List");
+                    $('#addItemModal').modal({
+                        backdrop: "static",
+                        show: true,
+                    });
+                    $("#addItemModal").on('hide.bs.modal', function (e) {
+                        if ($(document.activeElement)[0].innerText == "Close" || $(document.activeElement)[0].classList[0] == "close") {
+                        }
+                    });
+                    $("#addItemModal").on('hidden.bs.modal', function () {
+                        $("#addItemModal").unbind();
+                        $('.modal-backdrop').remove();
+                    });
+                },
+                error: function () {
+                }
+            });
+        });
+
+    function addItem(name, id, price) {
+        var rowIndex = $("#orderDetail tr").length;
+        rowIndex++;
+        $("#orderDetail").show();
+        var _existprice = $("#ppriceE_" + id + "").val();
+        if (_existprice != null) {
+            _existprice = parseInt(price) + parseInt(_existprice); $("#ppriceE_" + id + "").val(_existprice)
+            var _existtotal = $("#existAmount").val();
+            var finaltotal = parseInt(_existtotal) + parseInt(price);
+            $("#existAmount").val(finaltotal);
+        }
+        else {
+            var rowCount = $("#orderDetail > tbody > tr").length;
+            if (rowCount <= 10) {
+                var _orderDetail = {
+                    ProductID: id,
+                    ProductPrice: price
+                };
+                var _existprice = $("#existAmount").val();
+                //const parsedTotal = parseInt(totalPrice.innerText);
+                //var finaltotal = parseInt(parsedTotal) + parseInt(price);
+                var finaltotal = parseInt(_existprice) + parseInt(price);
+                $("#existAmount").val(finaltotal);
+                if (parseInt(finaltotal) > 10000) {
+                    alert("Max.Total price is not allowed more than 10000")
+                }
+                else {
+                    //totalPrice.innerHTML = parseInt(finaltotal);
+                    //$("#totalPrice").html(totalPrice.innerHTML);
+                    //this._orderlist.push(_orderDetail);
+                    //$('#orderDetail').append('<tr id=' + rowIndex + '><td>' + name + '</td><td><input type="text" value="' + price + '"/></td><td><input type="button" class="btn btn-primary btn-sm" id="" value="Delete" onclick="deleteItem(' + rowIndex + ')" /></td></tr>');
+                    var adddIV = '<tr class="Editlist" id=' + rowIndex + '><td><input type="hidden" id="productidE" value="' + id + '"><span id="productname_' + id + '">'+name+'</span></td>' +
+                        '<td><input type="text" class="ppriceE" id="ppriceE_' + id + '" value="' + price + '"></td>' +
+                        '<td><input type="button" class="btn btn-primary btn-sm" id="" value="Delete" onclick="deleteItem(' + price + ',' + rowIndex + ')" /></td></tr>';
+
+                    $('#orderDetail').append(adddIV)
+                }
+            }
+
+            else {
+                swal({
+                    title: "oops!",
+                    text: "Max number of line item should be allow only 10 for PO.",
+                    icon: "warning",
+                }, function (isConfirm) {
+                    if (isConfirm) {
+                    }
+                });
+            }
+        }
+    }
+
+
+    function deleteItem(price, rowIndex) {
+        $("#" + rowIndex + "").remove();
+        var _existprice = $("#existAmount").val();
+        var finaltotal = parseInt(_existprice) - parseInt(price);
+        $("#existAmount").val(finaltotal);
+
+    }
+
+    function deleteexitItem(_oid, _price, ID) {
+
+        if (confirm("Are you sure you want to delete ...?")) {
+            var url = '@Url.Content("~/")' + "OrderList/DeleteexitItem";
+
+            $.post(url, { oid: _oid, ID: ID }, function (data) {
+                alert(data);
+                if (data == "At least one line item should be in PO.") {
+                    var _existprice = $("#existAmount").val();
+                    var finaltotal = parseInt(_existprice) - parseInt(_price);
+                    $("#existAmount").val(finaltotal);
+                    window.location.reload("false");
+                }
+                else if (data == "Deleted") { alert("Deleted data successfully.!!"); }
+                else {
+                    alert("Not deleted!");
+                }
+            });
+        }
+        else {
+            return false;
+        }
+    }
+
+        function Addvaluetoexit() {
+
+                var data = [];
+                $('tr.Editlist').each(function () {
+                    var id = $(this).find('#productidE').val();
+                    var price = $(this).find('.ppriceE').val();
+                    //var id = $('#productidE').val();
+                    //var price = $('.ppriceE').val();
+                    //var SubcomponentName = $(this).find('.f-name01').val();//Bind to the SubcomponentName
+                    //var DataType = $(this).find('.l-name01').val();//Bind to the DataType
+                    //var SubcomponentData = $(this).find('.data01').val();//Bind to the SubcomponentData
+                    var _orderDetail = {
+                        ProductID: id,
+                        ProductPrice: price
+                    };
+                    data.push(_orderDetail);
+                })
+                return data;
+            };
+
+        function Gotolist() {
+            window.location.href = "/Home/Index";
+        }
+    </script>
+}
